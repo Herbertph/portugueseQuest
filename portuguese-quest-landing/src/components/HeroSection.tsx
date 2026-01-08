@@ -6,20 +6,20 @@ const HeroSection = () => {
         className="absolute inset-0 bg-cover bg-center md:bg-right"
         style={{
           backgroundImage:
-            "url('https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=2070&auto=format&fit=crop')",
+            "url('https://www.melhoresdestinos.com.br/wp-content/uploads/2019/08/rio-de-janeiro-capa2019-01.jpg')",
               backgroundPosition: "70% center",
         }}
       />
 
       {/* Dark overlay */}
-      <div className="absolute inset-0 bg-black/65" />
+      <div className="absolute inset-0 bg-gradient-to-r from-black/80 via-black/60 to-black/30" />
 
       {/* Content */}
       <div className="relative z-10 max-w-6xl px-6 md:px-12 text-white">
-        <h1 className="text-5xl md:text-6xl font-semibold leading-tight mb-6">
+        <h1 className="text-4xl sm:text-5xl md:text-6xl font-semibold leading-tight mb-6">
           Learn Brazilian Portuguese  
           <br />
-          by traveling — not studying.
+          by traveling - not studying.
         </h1>
 
         <p className="text-xl md:text-2xl text-gray-200 mb-10 max-w-3xl">
@@ -27,7 +27,10 @@ const HeroSection = () => {
           One mission per day. Built for beginners.
         </p>
 
-        <form className="flex flex-col sm:flex-row gap-4 max-w-md">
+        <form
+  className="flex flex-col sm:flex-row gap-4 max-w-md"
+  onSubmit={(e) => e.preventDefault()}
+>
           <input
             type="email"
             placeholder="Enter your email"
