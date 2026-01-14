@@ -1,56 +1,93 @@
-const HeroSection = () => {
+export default function HeroSection() {
   return (
-    <section className="relative min-h-screen flex items-center">
-      {/* Background image */}
+    <section className="bg-gray-100 pt-20 px-6 flex justify-center">
       <div
-        className="absolute inset-0 bg-cover bg-center md:bg-right"
-        style={{
-          backgroundImage:
-            "url('https://www.melhoresdestinos.com.br/wp-content/uploads/2019/08/rio-de-janeiro-capa2019-01.jpg')",
-              backgroundPosition: "70% center",
-        }}
-      />
+        className="
+         relative
+    transition-transform
+    duration-300
+    ease-out
+    hover:scale-[1.02]
+    will-change-transform
+          w-full max-w-6xl
+          bg-white
+          rounded-t-2xl
+          shadow-[0_20px_40px_rgba(0,0,0,0.08)]
+          overflow-hidden
+        "
+      >
+        {/* TOP HERO */}
+        <div className="grid grid-cols-1 md:grid-cols-2 min-h-[460px]">
+          
+          {/* LEFT TEXT */}
+          <div className="flex flex-col justify-center px-16 py-16">
+            <h1 className="text-5xl font-semibold leading-tight mb-6">
+              Learn Portuguese by living the language.
+            </h1>
+            <p className="text-lg text-gray-600 max-w-xl">
+              A 30-day immersive journey through real-life situations.
+              No textbooks. No boring drills.
+            </p>
+          </div>
 
-      {/* Dark overlay */}
-      <div className="absolute inset-0 bg-gradient-to-r from-black/80 via-black/60 to-black/30" />
+          {/* RIGHT IMAGE */}
+          <div className="relative w-full h-full">
+            <img
+              src="/BrazilianQuest.png"
+              alt="Brazilian Quest preview"
+              className="absolute inset-0 w-full h-full object-cover"
+            />
+          </div>
+        </div>
 
-      {/* Content */}
-      <div className="relative z-10 max-w-6xl px-6 md:px-12 text-white">
-        <h1 className="text-4xl sm:text-5xl md:text-6xl font-semibold leading-tight mb-6">
-          Learn Brazilian Portuguese  
-          <br />
-          by traveling - not studying.
-        </h1>
+        {/* EMAIL SECTION — PRETA */}
+        <div className="bg-black px-16 py-14 grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
+          
+          {/* EMAIL TEXT */}
+          <div>
+            <h3 className="text-xl font-semibold text-white mb-2">
+              Unlock an Exclusive Offer!
+            </h3>
+            <p className="text-gray-300">
+              We're launching soon. Sign up now to get an exclusive early-bird discount.
+            </p>
+          </div>
 
-        <p className="text-xl md:text-2xl text-gray-200 mb-10 max-w-3xl">
-          A 30-day, story-driven journey through real-life situations in Brazil.
-          One mission per day. Built for beginners.
-        </p>
-
-        <form
-  className="flex flex-col sm:flex-row gap-4 max-w-md"
-  onSubmit={(e) => e.preventDefault()}
->
-          <input
-            type="email"
-            placeholder="Enter your email"
-            className="px-4 py-3 rounded-md text-black focus:outline-none focus:ring-2 focus:ring-emerald-500"
-          />
-
-          <button
-  type="submit"
-  className="px-7 py-4 bg-emerald-500 hover:bg-emerald-600 rounded-lg font-semibold text-lg transition shadow-lg shadow-emerald-500/20"
->
-  Join early access
-</button>
-        </form>
-
-        <p className="text-sm text-gray-400 mt-4">
-          Early supporters get exclusive access and rewards.
-        </p>
+          {/* EMAIL FORM */}
+          <form className="flex flex-col gap-3">
+            <input
+              type="email"
+              placeholder="Email address"
+              required
+              className="
+                w-full
+                px-4 py-3
+                rounded-lg
+                border border-gray-300
+                focus:outline-none
+                focus:ring-2
+                focus:ring-green-600
+                text-white
+              "
+            />
+            <button
+              type="submit"
+              className="
+                w-full
+                bg-green-700
+                hover:bg-green-800
+                text-white
+                font-semibold
+                py-3
+                rounded-lg
+                transition
+              "
+            >
+              Get early access
+            </button>
+          </form>
+        </div>
       </div>
     </section>
-  )
+  );
 }
-
-export default HeroSection

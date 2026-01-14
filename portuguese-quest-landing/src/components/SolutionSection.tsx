@@ -1,61 +1,60 @@
-const SolutionSection = () => {
+export default function SolutionSection() {
   return (
-    <section className="py-28 px-6 md:px-12 bg-neutral-50">
-      <div className="max-w-6xl mx-auto">
-
-        {/* Headline */}
-        <div className="max-w-3xl mb-20">
-          <h2 className="text-3xl md:text-4xl font-semibold mb-6">
-            What if learning Portuguese felt like a real trip?
-          </h2>
-
-          <p className="text-lg md:text-xl text-gray-600">
-            Instead of lessons, you experience situations.
-            Instead of exercises, you complete missions.
-            <br />
-            You don’t study Portuguese — you live it.
-          </p>
-        </div>
-
-        {/* Steps */}
-        <div className="grid md:grid-cols-3 gap-12">
-
-          <div>
-            <h3 className="text-xl font-semibold mb-4">
-              Daily missions
-            </h3>
-            <p className="text-gray-600 leading-relaxed">
-              Every day, you unlock a new real-life scenario:
-              arriving at the airport, checking into a hotel,
-              ordering food, talking to locals.
-            </p>
+    <section className="bg-gray-100 px-6 flex justify-center pt-0">
+      <div
+        className="
+         relative
+    transition-transform
+    duration-300
+    ease-out
+    hover:scale-[1.02]
+    will-change-transform
+          w-full max-w-6xl
+          bg-gray-100
+          rounded-b-2xl
+          shadow-[0_20px_40px_rgba(0,0,0,0.06)]
+          overflow-hidden
+          -mt-0
+        "
+      >
+        <div className="grid grid-cols-1 md:grid-cols-2 min-h-[460px]">
+          
+          {/* LEFT IMAGE */}
+          <div className="relative w-full h-full">
+            <img
+              src="/BrazilianQuest.png"
+              alt="Brazilian Quest immersive learning"
+              className="absolute inset-0 w-full h-full object-cover"
+            />
           </div>
 
-          <div>
-            <h3 className="text-xl font-semibold mb-4">
-              Real context
-            </h3>
-            <p className="text-gray-600 leading-relaxed">
-              You learn words and phrases exactly where they’re used.
-              With audio, choices, and consequences — just like real life.
-            </p>
-          </div>
+          {/* RIGHT TEXT */}
+          <div className="flex flex-col justify-center px-16 py-16 bg-white">
+            <h2 className="text-4xl font-semibold leading-tight mb-6">
+              A different approach.
+            </h2>
 
-          <div>
-            <h3 className="text-xl font-semibold mb-4">
-              Progress that makes sense
-            </h3>
-            <p className="text-gray-600 leading-relaxed">
-              You don’t memorize lists.
-              You build confidence by surviving situations.
-              One day, one mission, one step forward.
+            <p className="text-lg text-gray-600 max-w-xl">
+              Brazilian Quest doesn’t start with rules or memorization.
+            </p>
+
+            <p className="text-lg text-gray-600 max-w-xl mt-4">
+              It starts with <strong>context</strong>. Real situations.
+              Real decisions. Real language.
+            </p>
+
+            <p className="text-lg text-gray-600 max-w-xl mt-4">
+              You don’t learn Portuguese first and use it later.
+              You <strong>use it from day one</strong> — and learn naturally along the way.
+            </p>
+
+            <p className="text-lg text-gray-600 max-w-xl mt-4">
+              Just like you did with your first language.
             </p>
           </div>
 
         </div>
       </div>
     </section>
-  )
+  );
 }
-
-export default SolutionSection
